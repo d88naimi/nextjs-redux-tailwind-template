@@ -12,7 +12,7 @@ import Drawer from './Drawer';
 const sideDrawerState = () => {
     const dispatch = useAppDispatch();
     const open = useAppSelector(selectDrawer);
-    console.log("🚀 ~ file: SideDrawer.tsx ~ line 15 ~ sideDrawerState ~ open", open)
+
 
     return (
         <>
@@ -26,7 +26,7 @@ const sideDrawerState = () => {
                     <FaAngleRight className='mt-auto' />
                 </div >
             </div >
-            <Drawer open={open} setOpen={() => dispatch(toggleSideDrawer())} />
+            <Drawer open={open} />
         </>
     )
 }
